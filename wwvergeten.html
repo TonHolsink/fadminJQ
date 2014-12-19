@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- HTTP 1.1 -->
+		<meta http-equiv="Cache-Control" content="no-store"/>
+		<!-- HTTP 1.0 -->
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<!-- Prevents caching at the Proxy Server -->
+		<meta http-equiv="Expires" content="0"/>
+		<meta name="robots" content="noindex"/>
+		<meta name="author" content="YourRequest BV"/>
+		<link rel="icon" href="resources/images/favicon.ico"/>
+		<title>Mijn Politie</title>
+		<link rel="stylesheet" type="text/css" media="all" href="resources/styles/style.css" />
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="container pageHeader">
+			<div class="clearfix">
+				<div class="pull-left">
+					<a href="index.html"><img src="resources/images/fraudnet-logo.png" /></a>
+				</div> <!-- .pull-left -->
+				<div class="pull-right">
+					<ul class="linkList-hor">
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</div> <!-- .pull-right -->
+			</div>
+			<div class="headerStripe"></div>
+			<div id="messageBlock">
+			</div>
+		</div> <!-- container -->
+		<div class="container">
+			<div class="main-content">
+				<div class="content-area">
+					<div class="breadcrumb-row">
+						<ul class="breadcrumb">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li class="active">Wachtwoord vergeten</li>
+						</ul>
+					</div>
+					<div class="page-header">
+						<h1 id="pageTitle">Wachtwoord vergeten</h1>
+					</div>
+
+<form id="loginForm" method="post" action="/yourrequest/passwordForgotten.html"class="form-horizontal" role="form">
+	Wanneer u uw wachtwoord vergeten bent kunt u hier uw gebruikersnaam invullen. U ontvangt dan een nieuw wachtwoord per e-mail.
+	<input name="supplier" id="supplier" size="4" value="20106120102" type="hidden">
+	<div class="alert alert-danger margin-top" role="alert">
+		<div style="background-image: none; background-color: transparent;" id="errorMessages">
+			Gebruikersnaam onbekend.<br>
+		</div>
+	</div>
+	<div class="form-group margin-top">
+		<label for="j_username" class="col-sm-2 control-label">Gebruikersnaam</label>
+		<div class="col-sm-10">
+			<input name="username" maxlength="50" tabindex="1" value="" type="text" class="form-control required">
+			<div class="help-block with-errors"></div>
+		</div>
+	</div>
+	<div class="clearfix">
+		<div class="pull-left">
+			<input class="btn btn-primary" name="pwForgotten" value="OK" tabindex="3" type="submit">
+		</div>
+		<div class="pull-right">
+			<a class="morelink" href="login.html">Terug naar inloggen</a>
+		</div>
+	</div>
+
+</form>
+
+				</div> <!-- .content-area -->
+			</div> <!-- .main-content -->
+		</div> <!-- .container -->
+		<!-- footer -->
+		<div class="container margin-top">
+			<footer>
+				<div class="text-right">
+					&copy;
+					2015
+					<a href="http://www.yourrequest.nl" class="targetblank">YourRequest</a>
+				</div>
+			</footer>
+		</div> <!-- .container -->
+		<!-- footer -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="resources/scripts/vendor/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="resources/scripts/vendor/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			//<![CDATA
+				(function() {
+
+					$(function() {
+						$('a.targetblank').each(function(idx, el) {
+							el.target = '_blank';
+						});
+					});
+
+				})();
+
+			//]]>
+		</script>
+		<!-- local script to bottom -->
+		<script type="text/javascript">
+			//<![CDATA[
+				(function() {
+
+					$(function() {
+
+					});
+
+				})();
+			//]]>
+		</script>
+		<script type="text/javascript">
+			//<![CDATA[
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'XX-XXXXXXXX-X', 'auto');
+				ga('send', 'pageview');
+			//]]>
+		</script>
+	</body>
+</html>

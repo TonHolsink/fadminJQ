@@ -1,0 +1,28 @@
+/*************************************************************
+ * MIXINS
+ *************************************************************/
+.forms-gradient{
+	#gradient > .horizontal(white, @formrow-bg-color, 40%, 80%);
+}
+
+.make-basic-panel(@border; @heading-text-color; @heading-bg-color; @heading-border) {
+	.panel-variant(@border; @heading-text-color; @heading-bg-color; @heading-border);
+	.panel-heading {
+		font-size: @font-size-h4;
+	}
+	.panel-body, .panel-footer {
+		padding: 0;
+	}
+	.panel-footer {
+		background-color: @heading-bg-color;
+		border-color: @heading-border;
+	}
+}
+
+.make-panel(@heading-bg-color, @bg-color, @heading-border: @panel-forms-border, @border: @panel-forms-border) {
+	background-color: @bg-color;
+	.make-basic-panel(@border; @panel-forms-text; @heading-bg-color; @heading-border);
+	.panel-body, .panel-footer {
+		padding: 15px;
+	}
+}

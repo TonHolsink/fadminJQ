@@ -1,0 +1,191 @@
+/*************************************************************
+ * EFORMS
+ *************************************************************/
+.mandatory {
+	&:before{
+		content: "*";
+	}
+	.text-emphasis-variant(@state-info-text);
+}
+
+.errortext {
+	font-size: 1.0em;
+	font-weight: bold;
+	font-style: normal;
+	color: @state-danger-text;
+}
+
+.help-block {
+	font-size: smaller;
+	line-height: 1em;
+}
+
+
+label, #dialogBox .dialogquestion{
+	font-size: 13px;
+	font-weight: bold;
+}
+
+/*************************************************************
+ * flowcontainer eforms
+ *************************************************************/
+.flowcontainer {
+	margin-top: 15px;
+	.label {
+		display: inline-block;
+		background-color: grey;
+	}
+	.label.current {background-color: @brand-signal;}
+}
+
+/*************************************************************
+ * formrow in panel
+ *************************************************************/
+.form-horizontal .control-label {
+	text-align: left;
+}
+
+.formrow {
+	.form-group;
+	input, select, textarea {
+		.form-control;
+	}
+}
+
+#dialog {
+	.form-horizontal;
+	.form-group {
+		margin: 0;
+	}
+	.formrow:after {
+		clear: both;
+	}
+	.formrow:before, .formrow:after {
+		content: " ";
+		display: table;
+	}
+	.validation-advice {
+		color: red;
+		font-weight: bold;
+		padding-bottom: 3px;
+	}
+	.validation-failed {
+		border: 1px solid red;
+	}
+	.control-label {
+		text-align: left;
+	}
+}
+
+.dialogquestion {
+	.make-sm-column(4);
+	.help-block {margin: 15px 0;}
+}
+.dialoganswer {
+	.make-sm-column(8);
+}
+
+.panel-forms {
+	.forms-gradient;
+	.make-basic-panel(@panel-forms-border; @panel-forms-text; @formrow-header-bg; @panel-forms-border);
+
+	.form-group, .formrow {
+		margin: 0;
+		padding: 10px 0;
+		border-top: 1px solid lighten(@formrow-border, 8%);
+	}
+	.form-group-inline {
+		border: none;
+		padding: 0;
+	}
+	.form-group-sm {
+		padding: 6px 0;
+		@media(min-width: @screen-sm-min) {
+			label {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.form-group:first-child, .formrow:first-child{
+		border: none;
+	}
+	.formrowtext {
+		padding: 10px 15px;
+	}
+	.help-block {
+		margin: 0 15px;
+	}
+	.help-block.with-errors ul,
+	.help-block.with-errors-inline ul {
+		margin-bottom: 0.5em;
+	}
+	.dialogquestion,
+	.dialoganswer,
+	.question,
+	.answer {
+		.help-block {margin: 0.5em 0;}
+	}
+	.alert {
+		margin-bottom: 15px;
+	}
+	.panel-footer {
+		min-height: 152px;
+		@media(min-width: @screen-md-min) {
+			min-height: 118px;
+		}
+		.alert {
+			margin-bottom: 0;
+		}
+	}
+	td:first-child, th:first-child {
+		padding-left: 15px;
+	}
+	td:last-child, th:last-child {
+		padding-right: 15px;
+	}
+	//Mandatory asterisk following a label sometimes appeared on a new line
+	.dialogquestion label {
+		@media(min-width: @screen-sm-min) {
+			display: inline;
+		}
+	}
+
+}
+/*************************************************************
+ * validatie mbt 2 inputs op 1 regel
+ *************************************************************/
+// .form-group-inline .form-control {
+// 	border-color: @input-border;
+// }
+.form-group.form-group-inline  {
+	.form-control-validation(@input-color; @input-border; @input-bg);
+}
+// .form-group-inline.has-error .form-control {
+// 	border-color: @state-danger-text;
+// }
+.form-group-inline.has-error {
+	.form-control-validation(@state-danger-text; @state-danger-text; @state-danger-bg);
+}
+
+.help-block.with-errors-inline,
+.form-group.has-error-inline .control-label {
+	color: @state-danger-text;
+}
+
+/*************************************************************
+ * Input placeholder
+ *************************************************************/
+.form-control::-webkit-input-placeholder, ::-webkit-input-placeholder { /* WebKit browsers */
+	color: @placeholder-color;
+}
+.form-control:-moz-placeholder, :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: @placeholder-color;
+opacity: 1;
+}
+.form-control::-moz-placeholder, ::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: @placeholder-color;
+opacity: 1;
+}
+.form-control:-ms-input-placeholder, :-ms-input-placeholder { /* Internet Explorer 10+ */
+color: @placeholder-color;
+}
