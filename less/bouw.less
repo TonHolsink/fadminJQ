@@ -44,7 +44,6 @@
 	}
 }
 
-//
 body.stretch .container {
 	width: auto;
 }
@@ -53,3 +52,41 @@ body.stretch .container {
 		margin: 0 15px;
 	}
 }
+
+//nav-bar
+.navbar-default {
+	background-color: transparent;
+	border: none;
+	.navbar-brand {
+		height: 70px;
+	}
+	.navbar-collapse {
+		@media (min-width: @screen-sm) {
+			padding-right: 0;
+		}
+		border: none;
+	}
+	.navbar-nav {
+		> li > a {
+			color: @link-color;
+		}
+		> li > a:hover {
+			color: @link-hover-color;
+			text-decoration: underline;
+		}
+		@media (min-width: @screen-sm) {
+			> li {
+				+ li {
+					background: url('../images/listsep.gif') no-repeat -6px 17px;
+				}
+			}
+		}
+
+	}
+	.headerStripe {
+		margin-top: 15px;
+	}
+}
+// .nav > li > a {
+// 	display: inline;
+// }
