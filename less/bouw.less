@@ -57,6 +57,7 @@ body.stretch .container {
 .navbar-default {
 	background-color: transparent;
 	border: none;
+	margin-bottom: 0;
 	.navbar-brand {
 		height: 70px;
 	}
@@ -67,6 +68,7 @@ body.stretch .container {
 		border: none;
 	}
 	.navbar-nav {
+		margin: 15px 0 0;
 		> li > a {
 			color: @link-color;
 		}
@@ -77,14 +79,30 @@ body.stretch .container {
 		@media (min-width: @screen-sm) {
 			> li {
 				+ li {
-					background: url('../images/listsep.gif') no-repeat -6px 17px;
+					background: url('../images/listsep.gif') no-repeat -6px 3px;
+				}
+				> a {
+					padding: 0 15px;
 				}
 			}
 		}
-
+		.open {
+			@media (min-width: @screen-sm) {
+				> a:focus {
+					// background: none;
+				}
+			}
+			.dropdown-menu > li > a {
+				color: @link-color;
+			}
+			.dropdown-menu > li > a:hover {
+				color: @link-hover-color;
+				text-decoration: underline;
+			}
+		}
 	}
 	.headerStripe {
-		margin-top: 15px;
+		margin-top: -5px;
 	}
 }
 // .nav > li > a {

@@ -5847,6 +5847,7 @@ body.stretch .container {
 .navbar-default {
   background-color: transparent;
   border: none;
+  margin-bottom: 0;
 }
 .navbar-default .navbar-brand {
   height: 70px;
@@ -5859,6 +5860,9 @@ body.stretch .container {
     padding-right: 0;
   }
 }
+.navbar-default .navbar-nav {
+  margin: 15px 0 0;
+}
 .navbar-default .navbar-nav > li > a {
   color: #000099;
 }
@@ -5868,11 +5872,21 @@ body.stretch .container {
 }
 @media (min-width: 768px) {
   .navbar-default .navbar-nav > li + li {
-    background: url('../images/listsep.gif') no-repeat -6px 17px;
+    background: url('../images/listsep.gif') no-repeat -6px 3px;
+  }
+  .navbar-default .navbar-nav > li > a {
+    padding: 0 15px;
   }
 }
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #000099;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+  color: #00004d;
+  text-decoration: underline;
+}
 .navbar-default .headerStripe {
-  margin-top: 15px;
+  margin-top: -5px;
 }
 /*************************************************************
  * CSS
@@ -5901,6 +5915,9 @@ a.bg-info-forced:hover {
 /*************************************************************
  * general
  *************************************************************/
+a {
+  outline: 0 !important;
+}
 .page-header {
   margin-top: 20px;
 }
