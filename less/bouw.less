@@ -37,18 +37,26 @@
 	@media(max-width: @screen-xs) {
 		display: none;
 	}
+	.breadcrumb {
+		padding: 0 @margin;
+	}
 }
-
+body.stretch {
+	.container {
+		width: auto;
+	}
+	@media (min-width: @screen-sm) {
+		.content-area {
+			margin: 0 15px;
+		}
+	}
+}
 //nav-bar
 .navbar-default {
-	margin-top: -10px; //ivm headerStripe
-//	.navbar-collapse {
-//		@media (min-width: @screen-sm) {
-//			padding-right: 0;
-//		}
-//	}
+	.navbar-toggle {
+		margin-top: 0;
+	}
 	.navbar-nav {
-		margin: @margin 0 0;
 		@media (min-width: @screen-sm) {
 			> li > a:hover {
 				background-color: transparent;
@@ -56,6 +64,7 @@
 			}
 			> li {
 				+ li {
+					padding-left: 6px; //Voor de puntjes indien active
 					background: url('../images/listsep.gif') no-repeat -6px 3px;
 				}
 				> a {
@@ -71,14 +80,14 @@
 	.headerStripeContainer {
 		position: relative;
 		width: 100%;
-		top: 75px;
+		top: 60px;
 		padding-left: 66px;
 	}
 	.headerStripe {
-		height: 10px;
-		background-color:@brand-primary;
+		border-top: 10px solid @brand-primary;
 	}
 	.navbar-brand {
 		background-color: transparent !important;
+		padding: 0 @margin;
 	}
 }
