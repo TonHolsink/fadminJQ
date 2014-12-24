@@ -2,12 +2,7 @@
  * BOUW
  *************************************************************/
 .pageHeader {
-	margin-top: 15px;
-}
-.headerStripe {
-	border-bottom: 10px solid @brand-primary;
-	margin-left: 66px;
-	margin-top: -10px;
+	margin-top: @margin;
 }
 .main-content {
 	.content-area {
@@ -44,67 +39,46 @@
 	}
 }
 
-body.stretch .container {
-	width: auto;
-}
-@media (min-width: @screen-sm) {
-	body.stretch .content-area {
-		margin: 0 15px;
-	}
-}
-
 //nav-bar
 .navbar-default {
-	background-color: transparent;
-	border: none;
-	margin-bottom: 0;
-	.navbar-brand {
-		height: 70px;
-	}
-	.navbar-collapse {
-		@media (min-width: @screen-sm) {
-			padding-right: 0;
-		}
-		border: none;
-	}
+	margin-top: -10px; //ivm headerStripe
+//	.navbar-collapse {
+//		@media (min-width: @screen-sm) {
+//			padding-right: 0;
+//		}
+//	}
 	.navbar-nav {
-		margin: 15px 0 0;
-		> li > a {
-			color: @link-color;
-		}
-		> li > a:hover {
-			color: @link-hover-color;
-			text-decoration: underline;
-		}
+		margin: @margin 0 0;
 		@media (min-width: @screen-sm) {
+			> li > a:hover {
+				background-color: transparent;
+				text-decoration: underline;
+			}
 			> li {
 				+ li {
 					background: url('../images/listsep.gif') no-repeat -6px 3px;
 				}
 				> a {
-					padding: 0 15px;
+					padding: 0 @margin;
 				}
 			}
-		}
-		.open {
-			@media (min-width: @screen-sm) {
-				> a:focus {
-					// background: none;
-				}
-			}
-			.dropdown-menu > li > a {
-				color: @link-color;
-			}
-			.dropdown-menu > li > a:hover {
-				color: @link-hover-color;
-				text-decoration: underline;
+			> .open > a,
+			> .open > a:focus {
+				background-color: transparent !important;
 			}
 		}
+	}
+	.headerStripeContainer {
+		position: relative;
+		width: 100%;
+		top: 75px;
+		padding-left: 66px;
 	}
 	.headerStripe {
-		margin-top: -5px;
+		height: 10px;
+		background-color:@brand-primary;
+	}
+	.navbar-brand {
+		background-color: transparent !important;
 	}
 }
-// .nav > li > a {
-// 	display: inline;
-// }

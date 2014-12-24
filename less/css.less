@@ -14,6 +14,9 @@
  * general
  *************************************************************/
 a {outline: 0 !important;} //No dotted line
+.relative {
+	position: relative;
+}
 .page-header {
 	margin-top: @line-height-computed;
 }
@@ -85,7 +88,7 @@ img.pull-right {
 }
 .helphover{cursor: help;}
 
-.margin-leftright-negative {margin-left: -15px; margin-right: -15px;}
+.margin-leftright-negative {margin-left: -@margin; margin-right: -@margin;}
 
 /**********************************************************************
 * inset
@@ -95,7 +98,7 @@ img.pull-right {
 	.pull-left;
 	.fg-signal;
 	margin-left: -5px;
-	margin-right: 15px;
+	margin-right: @margin;
 }
 /*************************************************************
  * utils
